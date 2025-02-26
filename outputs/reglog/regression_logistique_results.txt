@@ -1,0 +1,47 @@
+Résumé du modèle de régression logistique
+===============================
+
+                           Logit Regression Results                           
+==============================================================================
+Dep. Variable:       Taux d’insertion   No. Observations:                 1099
+Model:                          Logit   Df Residuals:                     1092
+Method:                           MLE   Df Model:                            6
+Date:                Sun, 12 Jan 2025   Pseudo R-squ.:                  0.3872
+Time:                        17:54:43   Log-Likelihood:                -466.36
+converged:                       True   LL-Null:                       -761.08
+Covariance Type:            nonrobust   LLR p-value:                4.416e-124
+================================================================================================================================
+                                                                   coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+const                                                          -13.4295      1.961     -6.849      0.000     -17.272      -9.587
+Part des emplois stables                                         0.1042      0.009     11.735      0.000       0.087       0.122
+Part des emplois de niveau cadre ou profession intermédiaire     0.1091      0.014      7.592      0.000       0.081       0.137
+Part des femmes                                                  0.0263      0.007      4.050      0.000       0.014       0.039
+Part des diplômés boursiers dans la discipline                  -0.0478      0.016     -2.956      0.003      -0.080      -0.016
+Domaine_encoded                                                 -2.6786      0.979     -2.736      0.006      -4.597      -0.760
+Taux de chômage national                                        -0.2253      0.086     -2.607      0.009      -0.395      -0.056
+================================================================================================================================
+
+Odds Ratios
+===========
+
+const                                                           0.000
+Part des emplois stables                                        1.110
+Part des emplois de niveau cadre ou profession intermédiaire    1.115
+Part des femmes                                                 1.027
+Part des diplômés boursiers dans la discipline                  0.953
+Domaine_encoded                                                 0.069
+Taux de chômage national                                        0.798
+
+Intervalle de confiance à 95% pour les Odds Ratios
+===================================================
+
+                                                                  0      1
+const                                                         0.000  0.000
+Part des emplois stables                                      1.091  1.129
+Part des emplois de niveau cadre ou profession intermédiaire  1.084  1.147
+Part des femmes                                               1.014  1.040
+Part des diplômés boursiers dans la discipline                0.924  0.984
+Domaine_encoded                                               0.010  0.468
+Taux de chômage national                                      0.674  0.946
+

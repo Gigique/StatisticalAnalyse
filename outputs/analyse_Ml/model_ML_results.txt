@@ -1,0 +1,41 @@
+RANDOM FOREST TEST
+===================================
+
+Accuracy moyenne sur les folds : 0.7056326625028915
+Écart-type de l'accuracy : 0.03211389018029148
+
+GRADIENT BOOSTING TEST
+===================================
+
+Accuracy moyenne sur les folds : 0.6950150358547305
+Écart-type de l'accuracy : 0.0309756746341164
+
+COMPARAISON ACCURACY SUR LE TRAIN ET LE TEST
+===================================
+
+Accuracy sur l'entraînement : 0.9590909090909091
+Accuracy sur le test : 0.6772727272727272
+
+RAPPORT DE CLASSIFICATION
+===================================
+
+Classification Report:
+              precision    recall  f1-score   support
+
+       Elevé       0.61      0.63      0.62        70
+      Faible       0.75      0.16      0.26        19
+       Moyen       0.69      0.81      0.74       106
+  Très élevé       0.84      0.64      0.73        25
+
+    accuracy                           0.68       220
+   macro avg       0.72      0.56      0.59       220
+weighted avg       0.69      0.68      0.66       220
+
+MATRICE DE CONFUSION
+===================================
+
+Confusion Matrix:
+[[44  0 23  3]
+ [ 2  3 14  0]
+ [19  1 86  0]
+ [ 7  0  2 16]]

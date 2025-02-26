@@ -1,0 +1,25 @@
+----------------------------------------
+Résultats du modèle entraîné avec un seuil de probabilité de 0.5
+Précision au seuil de 0.5 : 0.77
+Exactitude au seuil de 0.5 : 0.77
+----------------------------------------
+Métriques pour différents seuils de probabilité :
+Seuil: 0.50 | Accuracy: 0.77 | Precision: 0.77
+Seuil: 0.55 | Accuracy: 0.77 | Precision: 0.79
+Seuil: 0.60 | Accuracy: 0.76 | Precision: 0.80
+Seuil: 0.65 | Accuracy: 0.76 | Precision: 0.83
+Seuil: 0.70 | Accuracy: 0.77 | Precision: 0.88
+Seuil: 0.75 | Accuracy: 0.76 | Precision: 0.92
+Seuil: 0.80 | Accuracy: 0.73 | Precision: 0.93
+Seuil: 0.85 | Accuracy: 0.72 | Precision: 0.96
+Seuil: 0.90 | Accuracy: 0.65 | Precision: 0.95
+Seuil: 0.95 | Accuracy: 0.58 | Precision: 0.97
+Seuil: 1.00 | Accuracy: 0.48 | Precision: 0.00
+----------------------------------------
+Seuil optimal : 0.39
+TPR optimal : 0.87
+FPR optimal : 0.30
+----------------------------------------
+Résultats du modèle entraîné avec un seuil de probabilité de 0.56
+Précision avec seuil optimal : 0.76
+Exactitude avec seuil optimal : 0.79

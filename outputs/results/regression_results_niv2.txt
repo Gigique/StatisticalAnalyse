@@ -1,0 +1,87 @@
+ANALYSE DE RÉGRESSION AMÉLIORÉE
+==============================
+
+1. STATISTIQUES DESCRIPTIVES
+---------------------------
+
+Avant transformation:
+       Part des emplois stables  Part des emplois de niveau cadre ou profession intermédiaire  Part des femmes  Part des diplômés boursiers dans la discipline  Domaine_encoded  Taux de chômage national  Taux d’insertion
+count               1099.000000                                                   1099.000000      1099.000000                                     1099.000000      1099.000000               1099.000000       1099.000000
+mean                  65.574613                                                     85.641037        56.863967                                       32.611010         0.274495                  8.529936         88.100091
+std                   15.720474                                                     10.532245        21.375639                                        6.488743         0.122161                  1.063377          5.783668
+min                   21.000000                                                     40.000000         4.000000                                       11.000000         0.017288                  6.900000         61.000000
+25%                   54.000000                                                     79.000000        42.000000                                       29.000000         0.176524                  7.800000         85.000000
+50%                   65.000000                                                     87.000000        60.000000                                       32.000000         0.219290                  8.500000         89.000000
+75%                   78.000000                                                     95.000000        73.000000                                       36.500000         0.413103                  9.700000         92.000000
+max                   97.000000                                                    100.000000        92.000000                                       50.000000         0.413103                 10.100000        100.000000
+
+Après transformation:
+       Part des emplois stables  Part des emplois de niveau cadre ou profession intermédiaire  Part des femmes  Part des diplômés boursiers dans la discipline  Domaine_encoded  Taux de chômage national  Taux d’insertion
+count               1099.000000                                                   1099.000000      1099.000000                                     1099.000000      1099.000000               1099.000000       1099.000000
+mean                   0.032298                                                     -0.111661        -0.141015                                        0.107787         0.576354                  0.025240         88.190173
+std                    0.883610                                                      0.877803         0.961178                                        1.077220         1.275399                  0.896547          5.508997
+min                   -2.473133                                                     -2.697963        -2.518099                                       -2.402873        -2.108971                 -1.348982         74.500000
+25%                   -0.618283                                                     -0.674491        -0.809389                                       -0.505868        -0.446494                 -0.590179         85.000000
+50%                    0.000000                                                      0.000000         0.000000                                        0.000000         0.000000                  0.000000         89.000000
+75%                    0.730698                                                      0.674491         0.584559                                        0.758802         2.023472                  1.011736         92.000000
+max                    1.798642                                                      1.096047         1.438914                                        2.655807         2.023472                  1.348982        100.000000
+
+2. OUTLIERS DÉTECTÉS ET TRAITÉS
+------------------------------
+Part des emplois stables: 0 outliers traités
+Part des emplois de niveau cadre ou profession intermédiaire: 5 outliers traités
+Part des femmes: 0 outliers traités
+Part des diplômés boursiers dans la discipline: 20 outliers traités
+Domaine_encoded: 0 outliers traités
+Taux de chômage national: 0 outliers traités
+Taux d’insertion: 24 outliers traités
+
+3. RÉSULTATS DU MODÈLE
+---------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:       Taux d’insertion   R-squared:                       0.629
+Model:                            OLS   Adj. R-squared:                  0.627
+Method:                 Least Squares   F-statistic:                     308.6
+Date:                Sun, 12 Jan 2025   Prob (F-statistic):          4.43e-231
+Time:                        17:51:56   Log-Likelihood:                -2889.4
+No. Observations:                1099   AIC:                             5793.
+Df Residuals:                    1092   BIC:                             5828.
+Df Model:                           6                                         
+Covariance Type:            nonrobust                                         
+================================================================================================================================
+                                                                   coef    std err          t      P>|t|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------------------------------
+const                                                           88.9025      0.123    719.956      0.000      88.660      89.145
+Part des emplois stables                                         3.7043      0.166     22.269      0.000       3.378       4.031
+Part des emplois de niveau cadre ou profession intermédiaire     2.5076      0.187     13.409      0.000       2.141       2.875
+Part des femmes                                                  1.1097      0.173      6.419      0.000       0.770       1.449
+Part des diplômés boursiers dans la discipline                  -0.4148      0.113     -3.659      0.000      -0.637      -0.192
+Domaine_encoded                                                 -0.5900      0.118     -4.990      0.000      -0.822      -0.358
+Taux de chômage national                                        -0.4238      0.124     -3.422      0.001      -0.667      -0.181
+==============================================================================
+Omnibus:                       63.556   Durbin-Watson:                   1.641
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              183.191
+Skew:                          -0.249   Prob(JB):                     1.66e-40
+Kurtosis:                       4.937   Cond. No.                         4.17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+4. TESTS DE DIAGNOSTIC
+---------------------
+Test de Shapiro-Wilk : p-value = 0.0000
+Skewness : -0.2456
+Kurtosis : 1.9405
+
+5. FACTEURS D'INFLATION DE LA VARIANCE (VIF)
+----------------------------------------
+                                                       Variable       VIF
+0                                                         const  1.480216
+1                                      Part des emplois stables  2.095280
+2  Part des emplois de niveau cadre ou profession intermédiaire  2.613339
+3                                               Part des femmes  2.677554
+4                Part des diplômés boursiers dans la discipline  1.446159
+5                                               Domaine_encoded  2.205248
+6                                      Taux de chômage national  1.196033
